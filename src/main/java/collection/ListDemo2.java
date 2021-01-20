@@ -31,5 +31,23 @@ public class ListDemo2 {
         String old = list.remove(2);
         System.out.println(list);//[one, two, three, four, five]
         System.out.println(old);//2.5
+
+        //删除list中"four"元素
+        for (int i =0;i<list.size();i++){
+            if ("four".equals(list.get(i))){
+                list.remove(i);
+            }
+        }
+        System.out.println(list);
+
+
+        //删除 list1集合中的100
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(100);//自动装箱 new Integer
+        list1.add(200);
+        list1.add(300);
+        boolean b = list1.remove(new Integer(100));
+        System.out.println(b);
+
     }
 }
